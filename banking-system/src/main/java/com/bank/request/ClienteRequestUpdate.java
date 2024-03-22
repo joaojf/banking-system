@@ -2,9 +2,11 @@ package com.bank.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
+@Builder
 public class ClienteRequestUpdate {
     public static final String REGEX = "^\\d{11}$";
     public static final String NOME_BRANCO_OU_NULO = "O nome não pode estar em branco ou ser nulo";
