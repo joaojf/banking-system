@@ -32,7 +32,7 @@ public class ContaService {
         return repository.findById(id).orElseThrow(() -> new BadRequestException("Not Found id " + id));
     }
 
-    public Conta criarConta() {
+    public Conta save() {
         return repository.save(Conta.builder().identificadorConta(identificadorConta()).saldo(ZERO).build());
     }
 

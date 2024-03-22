@@ -43,7 +43,7 @@ public class ContaController {
 
     @PostMapping
     public ResponseEntity<Conta> save() {
-        return new ResponseEntity<>(service.criarConta(), HttpStatus.CREATED);
+        return new ResponseEntity<>(service.save(), HttpStatus.CREATED);
     }
 
     // TODO: Nesse cenário, modificar o nome no ContaRequest para ver o erro de ConstraintViolationException

@@ -32,7 +32,9 @@ public class ClienteService {
 
     @Transactional
     public Cliente save(ClienteRequest clienteRequest) {
-        Cliente cliente = Cliente.builder().nome(clienteRequest.getNome()).documento(clienteRequest.getDocumento())
+        Cliente cliente = Cliente.builder()
+                .nome(clienteRequest.getNome())
+                .documento(clienteRequest.getDocumento())
                 .conta(contaService.findByIdOrThrowBadRequestException(clienteRequest.getIdConta())).build();
         return repository.save(cliente);
     }
