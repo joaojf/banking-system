@@ -1,0 +1,14 @@
+language: java
+
+jdk:
+  - openjdk17
+
+# Comando para executar os testes e gerar relatórios de cobertura usando JaCoCo
+script:
+  - mvn clean verify
+
+# Após o sucesso dos testes, envia os relatórios de cobertura para o Codecov
+after_success:
+  # Gera os relatórios de cobertura em formato Codecov
+  - mvn jacoco:report
+  - bash <(curl -s https://codecov.io/bash)
