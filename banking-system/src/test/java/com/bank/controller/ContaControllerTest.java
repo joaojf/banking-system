@@ -52,7 +52,7 @@ class ContaControllerTest {
     }
 
     @Test
-    @DisplayName("listAllNonPageable returns list of clientes when successful")
+    @DisplayName("listAllNonPageable returns list of contas when successful")
     void listAllNoPageableShouldReturnsContaOfListWhenSuccessful() {
         List<Conta> contas = contaController.listAllNoPageable().getBody();
 
@@ -104,9 +104,9 @@ class ContaControllerTest {
     void deleteShouldDeleteContaWhenSuccessful() {
         assertThatCode(() -> contaController.delete(1L).getBody()).doesNotThrowAnyException();
 
-        ResponseEntity<Void> delete = contaController.delete(1L);
+        ResponseEntity<Void> deleted = contaController.delete(1L);
 
-        assertThat(delete.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
+        assertThat(deleted.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
     }
 
     private static Conta createConta() {
