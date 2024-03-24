@@ -96,7 +96,6 @@ class ContaControllerTest {
         ResponseEntity<Void> updated = contaController.update(1L, createContaRequest());
 
         assertThat(updated.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
-
     }
 
     @Test
