@@ -96,7 +96,6 @@ class ContaControllerTest {
         ResponseEntity<Void> updated = contaController.update(1L, createContaRequest());
 
         assertThat(updated.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
-
     }
 
     @Test
@@ -104,9 +103,9 @@ class ContaControllerTest {
     void deleteShouldDeleteContaWhenSuccessful() {
         assertThatCode(() -> contaController.delete(1L).getBody()).doesNotThrowAnyException();
 
-        ResponseEntity<Void> deleted = contaController.delete(1L);
+        ResponseEntity<Void> delete = contaController.delete(1L);
 
-        assertThat(deleted.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
+        assertThat(delete.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
     }
 
     private static Conta createConta() {
