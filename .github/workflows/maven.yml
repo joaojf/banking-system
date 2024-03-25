@@ -30,7 +30,7 @@ jobs:
     - name: List directory contents
       run: ls -al
     - name: Navigate to project directory banking-system/
-      run: cd /home/runner/work/banking-system/banking-system
+      run: cd /home/runner/work/banking-system/banking-system && echo "Current directory: $(pwd)" && ls -al
     - name: Print
       run: ls -al
     - name: Build with Maven
