@@ -25,6 +25,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+    - name: Navigate to project directory
+      run: cd banking-system
     - name: Build with Maven
       run: mvn package
     - name: Run tests and collect coverage
