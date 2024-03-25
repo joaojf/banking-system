@@ -31,6 +31,8 @@ jobs:
       run: pwd
     - name: List directory contents
       run: ls -al
+    - name: Navigate to project directory banking-system/
+      run: cd banking-system
     - name: Build with Maven
       run: mvn package
     - name: Run tests and collect coverage
