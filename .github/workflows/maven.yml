@@ -27,6 +27,10 @@ jobs:
         cache: maven
     - name: Navigate to project directory
       run: cd banking-system/
+    - name: Print current directory
+      run: pwd
+    - name: List directory contents
+      run: ls -al
     - name: Build with Maven
       run: mvn package
     - name: Run tests and collect coverage
