@@ -25,8 +25,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Navigate to project directory
-      run: cd banking-system/
     - name: Print current directory
       run: pwd
     - name: List directory contents
