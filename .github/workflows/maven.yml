@@ -32,7 +32,9 @@ jobs:
     - name: List directory contents
       run: ls -al
     - name: Navigate to project directory banking-system/
-      run: cd banking-system
+      run: cd /home/runner/work/banking-system/banking-system
+    - name: Print
+      run: ls -al
     - name: Build with Maven
       run: mvn package
     - name: Run tests and collect coverage
